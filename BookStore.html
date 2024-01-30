@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    function Author(name, birthYear, nationality){
+        this.name = name
+        this.birthYear = birthYear
+        this.nationality = nationality
+    }
+
+    function Book(title, author, genre, price){
+        this.title = title
+        this.author = author
+        this.genre = genre
+        this.price = price
+        this.getBookInfo = function(){
+            console.log(`${this.title} is written by the author ${this.author.name} which is one of the most famous ${this.genre} book which costs ₹${this.price}`)
+        }
+    }
+
+    let author1 = new Author("Mark Twain", 1984, "England")
+    let author2 = new Author("Lewis Carrol", 1976, "france")
+    let author3 = new Author("Agni Veena", 1988, "India")
+
+    let book1 = new Book("Adventures of Tom Sawyer", author1, "adventures", 800)
+    let book2 = new Book("Alice in Wonderland", author2, "Fantasy", 650)
+    let book3 = new Book("Kazi Nasrul Islam", author3, "Religious", 700)
+
+    console.log(book3)
+    book3.getBookInfo()
+
+    
+
+
+
+
+
+</script>
